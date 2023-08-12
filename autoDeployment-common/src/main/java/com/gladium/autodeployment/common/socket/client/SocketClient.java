@@ -2,6 +2,7 @@ package com.gladium.autodeployment.common.socket.client;
 
 import com.gladium.autodeployment.common.protobuf.Main;
 import com.gladium.autodeployment.common.socket.server.AutoDeployProtocol;
+import lombok.Getter;
 import org.smartboot.socket.transport.AioQuickClient;
 import org.smartboot.socket.transport.AioSession;
 import org.smartboot.socket.transport.WriteBuffer;
@@ -15,16 +16,15 @@ import java.util.Optional;
  * @date 2023/8/12 18:35
  * @description TODO
  */
+@Getter
 public class SocketClient {
 
 
-    private String host;
+    private final String host;
 
-    private int port;
+    private final int port;
 
-    private AioQuickClient client;
-
-    public SocketClient(){}
+    private final AioQuickClient client;
 
     public SocketClient(String host,int port){
         this.host = host;

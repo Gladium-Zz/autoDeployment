@@ -8,7 +8,11 @@
     <artifactId>autoDeployment</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
     <description>open webhook, execute shell to auto deployment docker images</description>
+    <url>https://github.com/Gladium-Zz/autoDeployment</url>
+
     <modules>
         <module>autoDeployment-core</module>
         <module>autoDeployment-admin</module>
@@ -19,10 +23,65 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.test.skip>true</maven.test.skip>
+
+
+        <spring.version>5.3.26</spring.version>
+        <spring-boot.version>2.7.9</spring-boot.version>
+
+        <mybatis-spring-boot-starter.version>2.3.0</mybatis-spring-boot-starter.version>
+        <mysql-connector-j.version>8.0.32</mysql-connector-j.version>
+
+        <slf4j-api.version>1.7.36</slf4j-api.version>
+        <lombok.version>1.18.26</lombok.version>
+        <protobuf-java.version>3.16.3</protobuf-java.version>
+
+        <commons-lang3.version>3.9</commons-lang3.version>
+        <aio-core.version>1.5.32</aio-core.version>
+
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
+        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
     </properties>
 
     <dependencyManagement>
-        <dependencies></dependencies>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.smartboot.socket</groupId>
+                <artifactId>aio-core</artifactId>
+                <version>${aio-core.version}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
 </project>

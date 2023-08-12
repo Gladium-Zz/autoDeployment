@@ -15,10 +15,10 @@ public class TestSocket {
 
     public static void main(String[] args) {
 
-        SocketServer server = new SocketServer();
-        server.startServer(9999);
+        /*SocketServer server = new SocketServer();
+        server.startServer(9999);*/
 
-        SocketClient client = new SocketClient("localhost",9999);
+        SocketClient client = new SocketClient("localhost",9527);
         Main.MainPb mainPb= Main.MainPb.newBuilder()
                 .setIp("127.0.0.1")
                 .setPort(1234)
@@ -27,8 +27,7 @@ public class TestSocket {
         client.sendMessage(mainPb);
 
 
-
-        SocketClient client1 = new SocketClient("localhost",9999);
+        SocketClient client1 = new SocketClient("localhost",9527);
         Main.MainPb mainPb1= Main.MainPb.newBuilder()
                 .setIp("127.0.0.2")
                 .setPort(2345)
