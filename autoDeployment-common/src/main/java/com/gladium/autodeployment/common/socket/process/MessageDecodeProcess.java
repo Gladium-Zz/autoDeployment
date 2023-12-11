@@ -10,6 +10,6 @@ import com.gladium.autodeployment.common.protobuf.Main;
  */
 public interface MessageDecodeProcess {
 
-    Main.MainPb decode(String clientName, Main.MainPb mainPb);
+    void decode(String clientName, Main.MainPb mainPb);
 
 }
